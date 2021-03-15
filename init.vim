@@ -1,3 +1,22 @@
+"""""""""""
+" Plugins "
+"""""""""""
+set nocompatible              " be iMproved, required
+filetype off                  " required
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'vim-airline/vim-airline'
+Plugin 'rust-lang/rust.vim'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'scrooloose/nerdtree'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+
 """""""""""""""""
 " Settings
 """""""""""""""""
@@ -91,4 +110,11 @@ set termguicolors
 """""""""""""""""
 " Shortcuts
 """""""""""""""""
-map ,ss :setlocal spell!<cr>
+let mapleader = ","
+nnoremap <leader>ss :setlocal spell!<cr>
+
+" NERDTree
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
